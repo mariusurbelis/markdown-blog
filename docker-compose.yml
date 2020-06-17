@@ -1,0 +1,11 @@
+version: "3"
+services:
+  blog:
+    image: nginx
+    container_name: blog
+    hostname: blog
+    restart: always
+    ports:
+      - 80:80
+    volumes:
+      - ./prototype/:/usr/share/nginx/html
