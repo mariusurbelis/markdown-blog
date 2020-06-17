@@ -1,7 +1,7 @@
 version: "3"
 services:
   blog:
-    image: nginx
+    build: .
     container_name: blog
     hostname: blog
     restart: always
@@ -9,3 +9,13 @@ services:
       - 80:80
     volumes:
       - ./prototype/:/usr/share/nginx/html
+
+  # blog:
+  #   image: httpd
+  #   container_name: blog
+  #   hostname: blog
+  #   restart: always
+  #   ports:
+  #     - 80:80
+  #   volumes:
+  #     - ./prototype/:/var/www/html
