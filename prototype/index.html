@@ -1,0 +1,21 @@
+<html>
+
+<head>
+    <title>Blog Test</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    for (var i = 1; i <= 4; i++) {
+        fetch(`./posts/${i}.md`).then(res => {
+            if (res.status === 200) {
+                console.log('found')
+            }
+        });
+    }
+</script>
+
+</html>
