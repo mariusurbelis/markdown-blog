@@ -14,13 +14,13 @@
 
 <body>
 
-<div class="container">
-    <div class="row">
-        <div class="col-12">
-            <h1>Markdown Blog Prototype</h1>
+    <div class="container">
+        <div class="mt-5 row">
+            <div class="col-12">
+                <h1>Markdown Blog Prototype</h1>
+            </div>
         </div>
     </div>
-</div>
 
 </body>
 
@@ -28,10 +28,14 @@
     for (var i = 1; i <= 4; i++) {
         fetch(`./posts/${i}.md`).then(res => {
             if (res.status === 200) {
-                console.log('found')
+                console.log('found');
             }
         });
     }
+
+    fetch(`./posts/`).then(res => {
+        console.log(res);
+    });
 </script>
 
 </html>
