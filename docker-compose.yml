@@ -8,7 +8,7 @@ services:
     ports:
       - 80:80
     volumes:
-      - ./prototype/:/usr/share/nginx/html
+      - ./prototype/:/html
 
   # blog:
   #   image: httpd
